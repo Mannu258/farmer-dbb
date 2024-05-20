@@ -1,0 +1,56 @@
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+.navbar-custom {
+    background-color: #0ab9ab;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+.product-table {
+    margin-top: 20px;
+}
+.product-table th {
+    background-color: #046c5d;
+    color: #fff;
+}
+.product-table td {
+    vertical-align: middle;
+}
+.product-table img {
+    width: 50px;
+    height: auto;
+}
+.submit-button {
+    background: linear-gradient(to right, #6dd5ed, #345057);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+.search-bar {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Showcase</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/details.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="/">Mojopanda Exim Private Limited</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="submit-button" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    {%for params in Farmer%}
+    <div class="container">
+        <div class="detail-header">
+            <h2>Item Details</h2>
+        </div>
+        <div class="detail-body">
+            <div class="detail-item">
+                <span class="detail-label">S NO:</span>
+                <span class="detail-value">{{params.ID}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">CITY:</span>
+                <span class="detail-value">{{params.CITY}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Farmer Code:</span>
+                <span class="detail-value">{{params.Farmer_Code}}</span>
+            </div>
+            <hr>
+            
+            <div class="detail-item">
+                <span class="detail-label">SCOPE:</span>
+                <span class="detail-value">{{params.SCOPE}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Farmer_Name:</span>
+                <span class="detail-value">{{params.Farmer_Name}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Father Husband:</span>
+                <span class="detail-value">{{params.Father_Husband}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">DISTRICT:</span>
+                <span class="detail-value">{{params.District}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Block:</span>
+                <span class="detail-value">{{params.Block}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Village:</span>
+                <span class="detail-value">{{params.Village}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">AADHAR:</span>
+                <span class="detail-value">{{params.AADHAR}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Mobile No :</span>
+                <span class="detail-value">{{params.Mobile_No}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Approx Area Ha:</span>
+                <span class="detail-value">{{params.Approx_Area_Ha}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Est YEILD:</span>
+                <span class="detail-value">{{params.Est_YEILD}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">No of Sheep:</span>
+                <span class="detail-value">{{params.No_of_Sheep}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Female:</span>
+                <span class="detail-value">{{params.Female}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Male:</span>
+                <span class="detail-value">{{params.Male}}</span>
+            </div>
+            <hr>
+            <div class="detail-item">
+                <span class="detail-label">Lamb:</span>
+                <span class="detail-value">{{params.Lamb}}</span>
+            </div>
+            <hr>
+            <div class="border">
+            </div>
+
+            {%endfor%}
+
+        </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="text-muted">© 2024 Company, Inc</span>
+        </div>
+        <a href="https://mandeep.pythonanywhere.com/" class="text-muted">Developer © 2024</a>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

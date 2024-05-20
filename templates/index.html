@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MojoPanda Exim Private Limited</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" type="image/x-icon">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="/">Mojopanda Exim Private Limited</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="submit-button" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- Add other navigation items here -->
+        </ul>
+    </div>
+</nav>
+
+<div class="container product-table">
+  <form method="post">
+    <input type="text" name="value" class="search-bar" placeholder="Discover City, District, Aadhar, Farmer Code, Mobile">
+    <input type="submit" class="submit-button" value="Find Now">
+  </form>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Serial No.</th>
+                <th scope="col">FARMER CODE</th>
+                <th scope="col">FARMER NAME</th>
+                <th scope="col">STATE & CITY </th>
+                <th scope="col">Distric</th>
+
+                <!-- Add more columns if needed -->
+            </tr>
+        </thead>
+        {%for params in Farmer%}
+        <tbody>
+          <th scope="row">{{loop.index}}</th>
+          <td><a href= "Details/{{params.ID}}">{{params.Farmer_Code}}</a></td>
+          <td><a href="Details/{{params.ID}}">{{params.Farmer_Name}}</a> </td>
+          <td><a href="Details/{{params.ID}}">{{params.CITY}}</a> </td>  
+          <td><a href="Details/{{params.ID}}">{{params.District}}</a> </td>
+
+
+        </tbody>
+        {%endfor%}
+    </table>
+</div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="text-muted">© 2024 Company, Inc</span>
+    </div>
+    <a href="https://mandeep.pythonanywhere.com/" class="text-muted m-3">Developer © 2024</a>
+  </footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
