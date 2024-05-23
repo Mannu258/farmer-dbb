@@ -36,10 +36,11 @@ class Farmers(db.Model):
     def __repr__(self) -> str:
         return f"{self.s_no} - {self.title}"
 class ItemView(ModelView):
+
+    column_list = ('ID', 'Farmer_Code', 'Farmer_Name','Mobile_No','AADHAR') 
     column_searchable_list = ['Farmer_Code', 'Farmer_Name','Mobile_No','AADHAR']
 
 admin.add_view(ItemView(Farmers, db.session))
-
 
 @app.route("/", methods=['POST','GET'])
 def index():
