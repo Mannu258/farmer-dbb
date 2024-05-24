@@ -52,6 +52,7 @@ def index():
             (Farmers.Mobile_No.ilike(f"%{code}%")) | 
             (Farmers.District.ilike(f"%{code}%")) | 
             (Farmers.AADHAR.ilike(f"%{code}%")) |
+            (Farmers.SCOPE.ilike(f"%{code}%")) |
             (Farmers.Farmer_Code.ilike(f"%{code}%"))
         ).all()
         return render_template('index.html', Farmer=farmer_results)
